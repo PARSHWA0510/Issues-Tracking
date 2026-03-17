@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "Issue Tracking API",
+    "_postman_id": "b4c4c1b0-0000-0000-0000-issue-tracking-api",
+    "description": "Postman collection for the minimal Issue Tracking Backend API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Issue",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"First issue\",\n  \"priority\": \"high\",\n  \"assignedTo\": \"alice\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/issues",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Issues",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/issues",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Issue",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"in-progress\",\n  \"assignedTo\": \"bob\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/issues/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "issues",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
+

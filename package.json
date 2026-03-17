@@ -1,0 +1,17 @@
+{
+  "name": "issue-tracking-backend",
+  "version": "1.0.0",
+  "description": "Minimal Issue Tracking Backend API with clean architecture and Express.js",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "joi": "^17.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
